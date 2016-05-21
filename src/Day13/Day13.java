@@ -59,7 +59,7 @@ import java.util.*;
 import java.util.logging.*;
 
 public class Day13 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day13.txt";
+    private final static String filePath = "day13.txt";
     private final static ArrayList<String> input = new ArrayList<>();
     private final static HashSet<String> people = new HashSet<>();
     private final static HashSet<String[]> happinessChart = new HashSet<>();

@@ -43,7 +43,7 @@ import java.util.*;
 import java.util.logging.*;
 
 public class Day12 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day12.txt";
+    private final static String filePath = "day12.txt";
     private static String input = new String();
     private final static ArrayList<Double> values = new ArrayList<>();
     private static double total = 0.0;

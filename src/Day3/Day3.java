@@ -47,7 +47,7 @@ import java.util.logging.Logger;
 public class Day3 {
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day3.txt";
+        String filePath = "day3.txt";
         int[][] houses = new int[10000][10000];
         int santaX = 5000, santaY = 5000, roboX = 5000, roboY = 5000, intInput, total = 0, totalCount = 0;
         char input;

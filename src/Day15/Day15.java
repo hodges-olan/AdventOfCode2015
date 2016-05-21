@@ -52,7 +52,7 @@ import java.util.ArrayList;
 import java.util.logging.*;
 
 public class Day15 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day15.txt";
+    private final static String filePath = "day15.txt";
     private final static ArrayList<String> input = new ArrayList<>();
     private static int[][] ingredients;
     private final static int teaspoons = 100;

@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 public class Day17Reddit {
 
     public static void main(String[] args) throws IOException {
-        List<String> s = Files.readAllLines(Paths.get("C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day17.txt"));
+        List<String> s = Files.readAllLines(Paths.get("day17.txt"));
         List<Integer> solutions = partOne(s);
         System.out.println("Part Two = " + partTwo(solutions));
     }

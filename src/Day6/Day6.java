@@ -58,7 +58,7 @@ import java.util.logging.Logger;
 public class Day6 {
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day6.txt";
+        String filePath = "day6.txt";
         String input, action, startCoordinateString, trash, endCoordinateString;
         String[] startCoordinateStringArray, endCoordinateStringArray;
         int[] startCoordinate = new int[2];

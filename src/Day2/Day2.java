@@ -49,7 +49,7 @@ public class Day2 {
     public static void main(String[] args) {
         
         String input;
-        String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day2.txt";
+        String filePath = "day2.txt";
         String[] dimensions;
         int[] intDimensions = new int[3];
         PrintWriter outFile = new PrintWriter(System.out, true);

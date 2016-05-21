@@ -55,7 +55,7 @@ import java.util.logging.Logger;
 public class Day5 {
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day5.txt";
+        String filePath = "day5.txt";
         String input, compareOne, compareTwo;
         int vowelCount, stringCount = 0, total = 0;
         boolean invalid, consecutive, repeatingChars;

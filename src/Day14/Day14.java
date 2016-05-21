@@ -45,7 +45,7 @@ import java.util.ArrayList;
 import java.util.logging.*;
 
 public class Day14 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day14.txt";
+    private final static String filePath = "day14.txt";
     private static final ArrayList<String> input = new ArrayList<>();
     private final static int raceTime = 2503;
     private static Integer[][] reindeerDistance;

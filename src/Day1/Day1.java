@@ -50,7 +50,7 @@ import java.util.*;
 import java.util.logging.*;
 
 public class Day1 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day1.txt";
+    private final static String filePath = "day1.txt";
     private final static ArrayList<Character> input = new ArrayList<>();
     
     public static void main(String[] args) {

@@ -58,7 +58,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Day9 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day9.txt";
+    private final static String filePath = "day9.txt";
     private final static ArrayList<String> input = new ArrayList<>();
     private final static HashSet<String> cities = new HashSet<>();
     private final static HashSet<String[]> distances = new HashSet<>();

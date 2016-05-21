@@ -62,7 +62,7 @@ public class Day8 {
     public static int remainingCharactersTotal = 0;
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day8.txt";
+        String filePath = "day8.txt";
         ArrayList<String> input;
         
         // Part 1

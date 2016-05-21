@@ -141,7 +141,7 @@ import java.util.*;
 import java.util.logging.*;
 
 public class Day18 {
-    private final static String filePath = "C:\\Users\\co075oh\\Documents\\NetBeansProjects\\byui.allthingsnetwork.org\\AdventOfCode\\day18.txt";
+    private final static String filePath = "day18.txt";
     private final static ArrayList<String> input = new ArrayList<>();
     private final static int row = 100, column = 100;
     private final static int[][] lights = new int[Day18.row][Day18.column];
