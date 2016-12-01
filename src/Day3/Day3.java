@@ -71,7 +71,7 @@ public class Day3 {
                         santaX = --santaX;
                         break;
                 }
-                houses[santaX][santaY] = ++houses[santaX][santaY];
+                houses[santaX][santaY]++;
             }
             
             for (int[] houseRows : houses) {
