@@ -26,7 +26,7 @@
 //
 //Your puzzle input describes all of the possible replacements and, at the bottom, the medicine molecule for which you need to calibrate the machine. How many distinct molecules can be created after all the different ways you can do one replacement on the medicine molecule?
 //
-//Your puzzle answer was 518.
+//Your puzzle answer was 576.
 //
 //--- Part Two ---
 //
@@ -50,7 +50,7 @@
 //
 //How long will it take to make the medicine? Given the available replacements and the medicine molecule in your puzzle input, what is the fewest number of steps to go from e to the medicine molecule?
 //
-//Your puzzle answer was 200.
+//Your puzzle answer was 207.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //
@@ -65,6 +65,7 @@ package Day19;
 import java.io.*;
 import java.util.*;
 import java.util.logging.*;
+import org.apache.commons.lang.StringUtils;
 
 public class Day19 {
     private final static String filePath = "day19.txt";
@@ -77,11 +78,13 @@ public class Day19 {
         Day19.readFile();
         
         // Part 1
-        for (String[] line : Day19.input) Day19.combos(line);
+        for(String[] line : Day19.input) Day19.combos(line);
         System.out.println("Part 1 molecule combinations: " + Day19.combos.size());
         
         // Part 2
-        while (!Day19.molecule.equals("e")) { for (String[] line : Day19.input) Day19.reverseCombos(line); }
+        while(!Day19.molecule.equals("e")) {
+            for (String[] line : Day19.input) Day19.reverseCombos(line);
+        }
         System.out.println("Part 2 molecule combinations: " + Day19.reverseCount);
     }
     
@@ -91,19 +94,20 @@ public class Day19 {
     }
 
     private static void combos(String[] line) {
-        if (Day19.molecule.contains(line[0])) {
+        if(Day19.molecule.contains(line[0])) {
             int i = 0;
-            while((i = Day19.molecule.indexOf(line[0], i+line[0].length())) >= 0) {
+            while((i = Day19.molecule.indexOf(line[0], i)) >= 0) {
                 String newMolecule = (Day19.molecule.substring(0, i) + line[1] + Day19.molecule.substring(i+line[0].length(), Day19.molecule.length()));
                 Day19.combos.add(newMolecule);
+                i = i + line[0].length();
             }
         }
     }
 
     private static void reverseCombos(String[] line) {
-        while (Day19.molecule.contains(line[1])) {
-            Day19.molecule = Day19.molecule.replaceFirst(line[1], line[0]);
-            Day19.reverseCount++;
+        if(Day19.molecule.contains(line[1])) {
+            Day19.reverseCount += StringUtils.countMatches(Day19.molecule, line[1]);
+            Day19.molecule = Day19.molecule.replaceAll(line[1], line[0]);
         }
     }
 }
