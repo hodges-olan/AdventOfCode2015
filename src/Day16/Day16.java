@@ -31,7 +31,7 @@
 //
 //What is the number of the Sue that got you the gift?
 //
-//Your puzzle answer was 213.
+//Your puzzle answer was 373.
 //
 //--- Part Two ---
 //
@@ -41,7 +41,7 @@
 //
 //What is the number of the real Aunt Sue?
 //
-//Your puzzle answer was 323.
+//Your puzzle answer was 260.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //

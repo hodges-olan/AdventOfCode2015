@@ -42,7 +42,6 @@ public class Day11 {
 
     public static void main(String[] args) {
         String input = "hepxcrrq";
-        String inputTwo = "hepxxyzz";
         
         // Part 1
         System.out.println("Part 1");
@@ -52,10 +51,10 @@ public class Day11 {
         
         // Part 2
         System.out.println("Part 2");
-        System.out.println("Old Password: " + inputTwo);
-        inputTwo = incrementPassword(inputTwo);
-        while (!Day11.validPassword(inputTwo)) { inputTwo = incrementPassword(inputTwo); }
-        System.out.println("New Password: " + inputTwo);
+        System.out.println("Old Password: " + input);
+        input = incrementPassword(input);
+        while (!Day11.validPassword(input)) { input = incrementPassword(input); }
+        System.out.println("New Password: " + input);
     }
 
     private static String incrementPassword(String input) {

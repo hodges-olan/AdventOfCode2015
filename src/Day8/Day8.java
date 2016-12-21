@@ -18,7 +18,7 @@
 //
 //For example, given the four strings above, the total number of characters of string code (2 + 5 + 10 + 6 = 23) minus the total number of characters in memory for string values (0 + 3 + 7 + 1 = 11) is 23 - 11 = 12.
 //
-//Your puzzle answer was 1333.
+//Your puzzle answer was 1371.
 //
 //--- Part Two ---
 //
@@ -32,7 +32,7 @@
 //"\x27" encodes to "\"\\x27\"", an increase from 6 characters to 11.
 //Your task is to find the total number of characters to represent the newly encoded strings minus the number of characters of code in each original string literal. For example, for the strings above, the total encoded length (6 + 9 + 16 + 11 = 42) minus the characters in the original code representation (23, just like in the first part of this puzzle) is 42 - 23 = 19.
 //
-//Your puzzle answer was 2046.
+//Your puzzle answer was 2117.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //
@@ -117,7 +117,7 @@ public class Day8 {
         for(String line : input) {
             matcher = pattern.matcher(line);
             while (matcher.find()) {
-                total = ++total;
+                total++;
                 line = line.replaceFirst("\\\\x[0-9a-f]{2}", "");
             }
             newInput.add(line);
@@ -134,7 +134,7 @@ public class Day8 {
         for (String line : input) {
             matcher = pattern.matcher(line);
             while (matcher.find()) {
-                total = ++total;
+                total++;
                 line = line.replaceFirst("\\\\\"", "");
             }
             newInput.add(line);
@@ -151,7 +151,7 @@ public class Day8 {
         for (String line : input) {
             matcher = pattern.matcher(line);
             while (matcher.find()) {
-                total = ++total;
+                total++;
                 line = line.replaceFirst("\\\\{2}", "");
             }
             newInput.add(line);

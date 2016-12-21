@@ -31,7 +31,7 @@
 //
 //What is the total change in happiness for the optimal seating arrangement of the actual guest list?
 //
-//Your puzzle answer was 709.
+//Your puzzle answer was 664.
 //
 //--- Part Two ---
 //
@@ -41,7 +41,7 @@
 //
 //What is the total change in happiness for the optimal seating arrangement that actually includes yourself?
 //
-//Your puzzle answer was 668.
+//Your puzzle answer was 640.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //

@@ -30,7 +30,7 @@
 //
 //What is the quantum entanglement of the first group of packages in the ideal configuration?
 //
-//Your puzzle answer was 11266889531.
+//Your puzzle answer was 10723906903.
 //
 //--- Part Two ---
 //
@@ -53,7 +53,7 @@
 //
 //Now, what is the quantum entanglement of the first group of packages in the ideal configuration?
 //
-//Your puzzle answer was 77387711.
+//Your puzzle answer was 74850409.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //

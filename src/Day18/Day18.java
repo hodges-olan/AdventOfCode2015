@@ -67,7 +67,7 @@
 //
 //In your grid of 100x100 lights, given your initial configuration, how many lights are on after 100 steps?
 //
-//Your puzzle answer was 768.
+//Your puzzle answer was 1061.
 //
 //--- Part Two ---
 //
@@ -124,7 +124,7 @@
 //
 //In your grid of 100x100 lights, given your initial configuration, but with the four corners always in the on state, how many lights are on after 100 steps?
 //
-//Your puzzle answer was 781.
+//Your puzzle answer was 1006.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //

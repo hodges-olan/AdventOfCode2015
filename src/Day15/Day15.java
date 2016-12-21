@@ -25,7 +25,7 @@
 //
 //Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make?
 //
-//Your puzzle answer was 21367368.
+//Your puzzle answer was 13882464.
 //
 //--- Part Two ---
 //
@@ -35,7 +35,7 @@
 //
 //Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make with a calorie total of 500?
 //
-//Your puzzle answer was 1766400.
+//Your puzzle answer was 11171160.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //

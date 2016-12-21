@@ -24,7 +24,7 @@
 //
 //What is the lowest house number of the house to get at least as many presents as the number in your puzzle input?
 //
-//Your puzzle answer was 831600.
+//Your puzzle answer was 665280.
 //
 //--- Part Two ---
 //
@@ -32,13 +32,13 @@
 //
 //With these changes, what is the new lowest house number of the house to get at least as many presents as the number in your puzzle input?
 //
-//Your puzzle answer was 884520.
+//Your puzzle answer was 705600.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //
 //At this point, you should return to your advent calendar and try another puzzle.
 //
-//Your puzzle input was 36000000.
+//Your puzzle input was 29000000.
 //
 //You can also [Share] this puzzle.
 
@@ -46,7 +46,7 @@ package Day20;
 
 public class Day20 {
     public static void main (String args[]) {
-        int input = 36000000;
+        int input = 29000000;
         int house;
         
         // Part 1
@@ -71,7 +71,6 @@ public class Day20 {
                     if (count%i == 0 && count/i <=50) total += (i*11);
                 } 
             }
-            //System.out.println("House " + count + " got " + total + " presents.");
         }
         return count;
     }

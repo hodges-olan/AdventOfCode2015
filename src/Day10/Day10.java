@@ -13,7 +13,7 @@
 //111221 becomes 312211 (three 1s, two 2s, and one 1).
 //Starting with the digits in your puzzle input, apply this process 40 times. What is the length of the result?
 //
-//Your puzzle answer was 252594.
+//Your puzzle answer was 329356.
 //
 //--- Part Two ---
 //
@@ -21,13 +21,13 @@
 //
 //Now, starting again with the digits in your puzzle input, apply this process 50 times. What is the length of the new result?
 //
-//Your puzzle answer was 3579328.
+//Your puzzle answer was 4666278.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //
 //At this point, you should return to your advent calendar and try another puzzle.
 //
-//Your puzzle input was 1113222113.
+//Your puzzle input was 3113322113.
 //
 //You can also [Share] this puzzle.
 
@@ -36,11 +36,21 @@ package Day10;
 public class Day10 {
 
     public static void main(String[] args) {
-        String input = "1113222113";
+        String input = "3113322113";
+        
+        // Part One
+        System.out.println("Part One: " + findResult(input, 40));
+        
+        // Part Two
+        System.out.println("Part Two: " + findResult(input, 50));
+        
+    }
+    
+    private static String findResult(String input, int repetitions) {
         StringBuilder newInput = new StringBuilder();
         char current;
         int count;
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < repetitions; i++) {
             current = input.charAt(0);
             count = 1;
             if (input.length() != 1) { 
@@ -60,6 +70,7 @@ public class Day10 {
             input = newInput.toString();
             newInput = new StringBuilder();
         }
-        System.out.println(input.length());
+        return Integer.toString(input.length());
     }
+
 }

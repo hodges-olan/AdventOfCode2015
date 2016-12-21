@@ -42,7 +42,9 @@
 //
 //Santa looks nervous. Your puzzle input contains the message on the machine's console. What code do you give the machine?
 //
-//Your puzzle answer was 9132360.
+//Your puzzle answer was 8997277.
+//
+//The first half of this puzzle is complete! It provides one gold star: *
 //
 //--- Part Two ---
 //
@@ -50,21 +52,15 @@
 //
 //..."one star is available"? You check the fuel tank; sure enough, a lone star sits at the bottom, awaiting its friends. Looks like you need to provide 49 yourself.
 //
-//If you like, you can .
+//You don't have enough stars to start the machine, though. You need 4 more.
 //
-//Both parts of this puzzle are complete! They provide two gold stars: **
-//
-//At this point, all that is left is for you to admire your advent calendar.
-//
-//If you still want to see it, you can get your puzzle input.
-//
-//You can also [Share] this puzzle.
+//You can [Share] this puzzle.
 
 package Day25;
 
 public class Day25 {
     public static void main(String args[]) {
-        double correctCode = Day25.getCode(20151125, 3075, 2981);
+        double correctCode = Day25.getCode(20151125, 3019, 3010);
         System.out.printf("%.0f", correctCode);
     }
     

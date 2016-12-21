@@ -15,7 +15,7 @@
 //turn off 499,499 through 500,500 would turn off (or leave off) the middle four lights.
 //After following the instructions, how many lights are lit?
 //
-//Your puzzle answer was 569999.
+//Your puzzle answer was 377891.
 //
 //--- Part Two ---
 //
@@ -35,15 +35,9 @@
 //
 //turn on 0,0 through 0,0 would increase the total brightness by 1.
 //toggle 0,0 through 999,999 would increase the total brightness by 2000000.
-//Your puzzle answer was 17836115.
+//Your puzzle answer was 14110788.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
-//
-//At this point, you should return to your advent calendar and try another puzzle.
-//
-//If you still want to see it, you can get your puzzle input.
-//
-//You can also [Share] this puzzle.
 
 package Day6;
 

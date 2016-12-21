@@ -46,7 +46,7 @@
 //
 //You have 100 hit points. The boss's actual stats are in your puzzle input. What is the least amount of gold you can spend and still win the fight?
 //
-//Your puzzle answer was 121.
+//Your puzzle answer was 78.
 //
 //--- Part Two ---
 //
@@ -54,7 +54,7 @@
 //
 //What is the most amount of gold you can spend and still lose the fight?
 //
-//Your puzzle answer was 201.
+//Your puzzle answer was 148.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
 //
@@ -78,7 +78,7 @@ public class Day21 {
             for (int armor = 0; armor <= armors.length; armor++) {
                 for (int ring1 = 0; ring1 <= rings.length; ring1++) {
                     for (int ring2 = 0; ring2 <= rings.length; ring2++) {
-                        int bossHitPoints = 103, bossDamage = 9, bossArmor = 2, playerHitPoints = 100;
+                        int bossHitPoints = 104, bossDamage = 8, bossArmor = 1, playerHitPoints = 100;
                         int playerDamage = Integer.parseInt(weapons[weapon][2]); 
                         playerDamage += ring1 != 0 ? Integer.parseInt(rings[ring1-1][2]) : 0;
                         playerDamage += ring2 != 0 && ring1 != ring2 ? Integer.parseInt(rings[ring2-1][2]) : 0;

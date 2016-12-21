@@ -29,12 +29,6 @@
 //Your puzzle answer was 2639.
 //
 //Both parts of this puzzle are complete! They provide two gold stars: **
-//
-//At this point, you should return to your advent calendar and try another puzzle.
-//
-//If you still want to see it, you can get your puzzle input.
-//
-//You can also [Share] this puzzle.
 
 package Day3;
 
@@ -59,16 +53,16 @@ public class Day3 {
                 input = (char) intInput;
                 switch(input) {
                     case '^':
-                        santaY = --santaY;
+                        santaY--;
                         break;
                     case '>':
-                        santaX = ++santaX;
+                        santaX++;
                         break;
                     case 'v':
-                        santaY = ++santaY;
+                        santaY++;
                         break;
                     default:
-                        santaX = --santaX;
+                        santaX--;
                         break;
                 }
                 houses[santaX][santaY]++;
@@ -77,7 +71,7 @@ public class Day3 {
             for (int[] houseRows : houses) {
                 for (int house : houseRows) {
                     if (house > 0) {
-                        total = ++total;
+                        total++;
                     } 
                 }
             }
@@ -100,30 +94,30 @@ public class Day3 {
                 switch(input) {
                     case '^':
                         if (totalCount%2 == 0) {
-                            santaY = --santaY;
+                            santaY--;
                         } else {
-                            roboY = --roboY;
+                            roboY--;
                         }
                         break;
                     case '>':
                         if (totalCount%2 == 0) {
-                            santaX = ++santaX;
+                            santaX++;
                         } else {
-                            roboX = ++roboX;
+                            roboX++;
                         }
                         break;
                     case 'v':
                         if (totalCount%2 == 0) {
-                            santaY = ++santaY;
+                            santaY++;
                         } else {
-                            roboY = ++roboY;
+                            roboY++;
                         }
                         break;
                     default:
                         if (totalCount%2 == 0) {
-                            santaX = --santaX;
+                            santaX--;
                         } else {
-                            roboX = --roboX;
+                            roboX--;
                         }
                         break;
                 }
