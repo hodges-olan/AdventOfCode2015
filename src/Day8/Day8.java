@@ -63,18 +63,25 @@ public class Day8 {
 
     public static void main(String[] args) {
         String filePath = "day8.txt";
-        ArrayList<String> input;
+        ArrayList<String> input = Day8.readFile(filePath);;
         
         // Part 1
-        input = Day8.readFile(filePath);
+        System.out.println("Part One: " + partOne(input, false));
+        
+        // Part 2
+        System.out.println("Part Two: " + partOne(input, true));
+        
+    }
+    
+    private static String partOne(ArrayList<String> input, boolean partTwo) {
         Day8.countTotalCharacters(input);
         input = Day8.removeQuotes(input);
         input = Day8.countHex(input);
-        input = Day8.countQuotes(input);
-        input = Day8.countBackslashes(input);
+        input = Day8.countQuotes(input, partTwo);
+        input = Day8.countBackslashes(input, partTwo);
         Day8.countRemainingCharacters(input);
-        Day8.displayResults(input);
-        
+        int total = (partTwo) ? (Day8.totalCharacterCount + Day8.backslashesTotal + Day8.hexTotal + Day8.quotesTotal) - Day8.totalCharacterCount : Day8.totalCharacterCount - Day8.backslashesTotal - Day8.hexTotal - Day8.quotesTotal - Day8.remainingCharactersTotal;
+        return Integer.toString(total);
     }
     
     private static ArrayList<String> readFile(String filePath) {
@@ -84,17 +91,6 @@ public class Day8 {
             while((read = in.readLine()) != null) { input.add(read.trim()); }
         } catch (IOException ex) { Logger.getLogger(Day8.class.getName()).log(Level.SEVERE, null, ex); }
         return input;
-    }
-
-    private static void displayResults(ArrayList<String> input) {
-        input.stream().forEach((output) -> { System.out.println(output); });
-        System.out.println(Day8.totalCharacterCount);
-        System.out.println(Day8.hexTotal);
-        System.out.println(Day8.quotesTotal);
-        System.out.println(Day8.backslashesTotal);
-        System.out.println(Day8.remainingCharactersTotal);        
-        int total = Day8.totalCharacterCount - Day8.backslashesTotal - Day8.hexTotal - Day8.quotesTotal - Day8.remainingCharactersTotal;
-        System.out.println("Total: " + total);
     }
 
     private static ArrayList<String> removeQuotes(ArrayList<String> input) {
@@ -126,7 +122,7 @@ public class Day8 {
         return newInput;
     }
 
-    private static ArrayList<String> countQuotes(ArrayList<String> input) {
+    private static ArrayList<String> countQuotes(ArrayList<String> input, boolean partTwo) {
         ArrayList<String> newInput = new ArrayList<>();
         int total = 0;
         Pattern pattern = Pattern.compile("\\\\\"");
@@ -134,16 +130,17 @@ public class Day8 {
         for (String line : input) {
             matcher = pattern.matcher(line);
             while (matcher.find()) {
-                total++;
+                total = (partTwo) ? total + 2 : ++total;
                 line = line.replaceFirst("\\\\\"", "");
             }
+            if(partTwo) total = total + 4;
             newInput.add(line);
         }
         Day8.quotesTotal = total;
         return newInput;
     }
 
-    private static ArrayList<String> countBackslashes(ArrayList<String> input) {
+    private static ArrayList<String> countBackslashes(ArrayList<String> input, boolean partTwo) {
         ArrayList<String> newInput = new ArrayList<>();
         int total = 0;
         Pattern pattern = Pattern.compile("\\\\{2}");
@@ -151,7 +148,7 @@ public class Day8 {
         for (String line : input) {
             matcher = pattern.matcher(line);
             while (matcher.find()) {
-                total++;
+                total = (partTwo) ? total + 2 : ++total;
                 line = line.replaceFirst("\\\\{2}", "");
             }
             newInput.add(line);
@@ -165,4 +162,5 @@ public class Day8 {
         for (String line : input) { total = total + line.length(); }
         Day8.remainingCharactersTotal = total;
     }
+
 }
