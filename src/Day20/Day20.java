@@ -47,31 +47,44 @@ package Day20;
 public class Day20 {
     public static void main (String args[]) {
         int input = 29000000;
-        int house;
         
         // Part 1
-        house = Day20.deliverPresents(input, false);
-        System.out.println("Part 1 House #: " + house);
+        System.out.println("Part 1 House #: " + partOne(input));
         
         // Part 2
-        house = Day20.deliverPresents(input, true);
-        System.out.println("Part 2 House #: " + house);
+        System.out.println("Part 2 House #: " + partTwo(input));
     }
 
-    private static int deliverPresents(int input, boolean part2) {
-        int total = 0;
-        int count = 0;
-        while (total < input) {
-            total = 0;
-            count++;
-            for (int i = 1; i <= count; i++) {
-                if (!part2) {
-                    if (count%i == 0) total += (i*10);
-                } else {
-                    if (count%i == 0 && count/i <=50) total += (i*11);
-                } 
+    private static String partOne(int nr) {
+        int[] houses = new int[1000000];
+        for(int i = 1; i < houses.length; i++) {
+            for(int j = i; j < houses.length; j+=i) {
+                houses[j] += i*10;
             }
         }
-        return count;
+        for(int i = 0; i < houses.length; i++) {
+            if(houses[i] >= nr) {
+                return Integer.toString(i);
+            }
+        }
+        return "null";
+    }
+    
+    private static String partTwo(int nr) {
+        int[] houses = new int[1000000];
+        for(int i = 1; i < houses.length; i++) {
+            int count = 0;
+            for(int j = i; j < houses.length; j+=i) {
+                houses[j] += i*11;
+                if(++count == 50) 
+                    break;
+            }
+        }
+        for(int i = 0; i < houses.length; i++) {
+            if(houses[i] >= nr) {
+                return Integer.toString(i);
+            }
+        }
+        return "null";
     }
 }
